@@ -10,13 +10,13 @@
  プログラムをコンパイルして検証せよ。*/
 
 
-//#include <iostream>
+#include <iostream>
 using namespace std; // 名前空間の宣言
 
 int main() {
 	std::cout << "!!!Hello World!!!" << std::endl; // prints !!!Hello World!!!
-	return 0; // あああ
-
+	return 0; // 整数を返す。
+}
 	// 解答
 	// <iostream>が欠如したプログラムでは、名前空間std中で宣言されている入出力関数が使用できなくなり、
 	// コンパイルエラーとなる。
