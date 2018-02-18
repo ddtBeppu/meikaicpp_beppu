@@ -9,7 +9,6 @@
 /*ヘッダ<iostream>をインクルードする指令が欠如しているとどうなるだろうか。
  プログラムをコンパイルして検証せよ。*/
 
-
 #include <iostream>
 using namespace std; // 名前空間の宣言
 
