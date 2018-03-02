@@ -17,16 +17,25 @@
 using namespace std;
 
 int main() {
-	int hand; // 手の形を表す整数を格納する変数
-	int div = 3; // 乱数を3で割り、0 ~ 2の乱数を発生させる
+	int hand = 0; // 手の形を表す整数を格納する変数
+	const int div = 3; // 乱数を3で割り、0 ~ 2の乱数を発生させる
 
 	srand(time(NULL)); // 乱数の種を生成
 	hand = rand() % div; // 0,1,2いずれかの乱数を生成
 
 	switch(hand){ // switch文
-	case 0: cout << "グー\n" << endl; break; // 0の場合、グーと出力
-	case 1: cout << "チョキ\n" << endl; break; // 1の場合、チョキと出力
-	case 2: cout << "パー\n" << endl; break; // 2の場合、パーと出力
+	case 0:
+		// テキストの出力
+		cout << "グー\n" << endl;
+		break; // 0の場合、グーと出力
+	case 1:
+		// テキストの出力
+		cout << "チョキ\n" << endl;
+		break; // 1の場合、チョキと出力
+	case 2:
+		// テキストの出力
+		cout << "パー\n" << endl;
+		break; // 2の場合、パーと出力
 	}
 
 	return 0; // 整数値を返す
