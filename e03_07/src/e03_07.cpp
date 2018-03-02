@@ -15,7 +15,7 @@ using namespace std;
 int main() {
 	int i_num = 0; //　正の整数値を格納する変数
 	int i_count = 0; // 桁数をカウントする変数
-	int i_div = 10; // 入力値を割る値
+	const int i_div = 10; // 入力値を割る値
 
 	// 値の入力を促すコメント
 	cout << "正の整数値を入力してください。: ";
