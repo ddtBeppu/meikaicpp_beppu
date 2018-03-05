@@ -18,6 +18,8 @@ int main() {
 	int i_height_min = 0; // 入力する身長の下限
 	int i_height_max = 0; // 入力する身長の上限
 	int diff = 0; // 表示する身長の増分
+
+	int height = 0; // 身長（出力値）
 	double d_weight = 0; // 標準体重
 
 	cout << "何cmから："; // 開始値の入力を促す
@@ -29,7 +31,7 @@ int main() {
 	cout << "何cmごと："; // 増分の入力を促す
 	cin >> diff; // キーボードから値を読み込む
 
-	for (int height = i_height_min; // 開始値を変数height(出力値)に代入
+	for (height = i_height_min; // 開始値を変数height(出力値)に代入
 			height <= i_height_max; // 変数heightが終了値と等しくなるまで
 			height += diff /* 変数heightに増分を足し合わせていく*/) {
 		// 標準体重を算出
