@@ -15,7 +15,7 @@ using namespace std;
 
 int main() {
 	const int i_end = 9; // 値の範囲。九九なので、9まで。
-	const string blank = " ";
+	const string blank = " "; // スペース1文字分
 
 	for (int cols = 1; cols <= i_end; cols++) { // 列数が1~9ので繰り返し
 		for (int rows = 1; rows <= i_end; rows++) { // 行数が1~9ので繰り返し
