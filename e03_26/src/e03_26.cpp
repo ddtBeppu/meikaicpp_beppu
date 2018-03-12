@@ -23,10 +23,10 @@ const string hands[3] = {"グー", "チョキ", "パー"}; // ジャンケンの
 
 // ジャンケンをする関数
 int rock_paper_scissors ();
-// ゲームの終了判定をする関数
-int finish_game (int end);
 // 勝者、あるいは引き分けをアナウンスする関数
 void call_winner (int win);
+// ゲームの終了判定をする関数
+int finish_game (int end);
 
 int main() {
 	int i_rule = 0; // ゲームの内容を決定する変数を格納する変数
