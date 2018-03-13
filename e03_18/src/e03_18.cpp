@@ -15,21 +15,28 @@ using namespace std;
 
 int main() {
 	const int i_end = 9; // 値の範囲。九九なので、9まで。
-	const string blank = " "; // スペース1文字分
+	const string s_blank = " "; // スペース1文字分
+	const int i_border = 10; // 10以上 or 未満を判別する為に使用する
 
 	for (int cols = 1; cols <= i_end; cols++) { // 列数が1~9ので繰り返し
 		for (int rows = 1; rows <= i_end; rows++) { // 行数が1~9ので繰り返し
-			int mul = rows * cols; // 2数の積を求める
+			// 2数の積を求める
+			int mul = rows * cols;
 
-			if (mul <= i_end) { // 積が1桁の場合
-				cout << blank; // スペースを1文字分とる
-				cout << blank; // スペースを1文字分とる
-			} else if (mul > i_end){ // 積が2桁の場合
-				cout << blank; // スペースを1文字分とる
+			if (mul < i_border) { // 積が1桁の場合
+				// スペースを1文字分とる
+				cout << s_blank;
+				// スペースを1文字分とる
+				cout << s_blank;
+			} else if (mul >= i_border){ // 積が2桁の場合
+				// スペースを1文字分とる
+				cout << s_blank;
 			}
-			cout << mul; // 積の値を出力
+			// 積の値を出力
+			cout << mul;
 		}
-		cout << "\n"; // 次の段を表示するため改行
+		// 次の段を表示するため改行
+		cout << "\n";
 	}
 	// 整数値を返す
 	return 0;
