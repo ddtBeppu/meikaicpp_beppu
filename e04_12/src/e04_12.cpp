@@ -22,6 +22,7 @@ int main() {
 	};
 
 	int iType = 0; // 列挙子の値を指定するための変数
+	// 入力値をcards型にキャストして代入
 	cards cDesign = static_cast<cards> (iType);
 
 	// 以下、繰り返し
