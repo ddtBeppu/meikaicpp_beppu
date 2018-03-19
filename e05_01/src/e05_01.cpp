@@ -17,14 +17,18 @@ int main() {
 	int iMax = 5; // 配列に代入する初期値
 
 	// 配列の要素数の回数だけ繰り返し
-	for (int i = 1; i <= sizeArray; i++) {
+	for (int i = 0; i < sizeArray; i++) {
 		// 5から順に値を配列に代入
 		iArray[i] = iMax;
 
-		// 配列要素を表示
-		cout << "iArray[" << i << "]" << " = " << iMax << endl;
 		// カウントダウンする
 		iMax--;
+	}
+
+	// 配列の要素数の回数だけ繰り返し
+	for (int i = 0; i < sizeArray; i++) {
+		// 配列要素を表示
+		cout << "iArray[" << i << "]" << " = " << iArray[i] << endl;
 	}
 
 	// 整数値を返す
