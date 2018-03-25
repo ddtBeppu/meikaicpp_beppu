@@ -32,37 +32,37 @@ int main() {
 // 引数の値に応じて、季節を表示する関数
 void print_season(int iMonth) {
 	switch (iMonth) { // 入力された月に応じて、季節を表示
-	case 3: // 3月
-	case 4: // 4月
-	case 5: // 5月
-		// テキストの出力
-		cout << "春";
-		// switch文を抜ける
-		break;
-	case 6: // 6月
-	case 7: // 7月
-	case 8: // 8月
-		// テキストの出力
-		cout << "夏";
-		// switch文を抜ける
-		break;
-	case 9: // 9月
-	case 10: // 10月
-	case 11: // 11月
-		// テキストの出力
-		cout << "秋";
-		// switch文を抜ける
-		break;
-	case 12: // 12月
-	case 1: // 1月
-	case 2: // 2月
-		// テキストの出力
-		cout << "冬";
-		// switch文を抜ける
-		break;
-	default:
-		// 強制的に関数を抜ける
-		return;
+		case 3: // 3月
+		case 4: // 4月
+		case 5: // 5月
+			// テキストの出力
+			cout << "春";
+			// switch文を抜ける
+			break;
+		case 6: // 6月
+		case 7: // 7月
+		case 8: // 8月
+			// テキストの出力
+			cout << "夏";
+			// switch文を抜ける
+			break;
+		case 9: // 9月
+		case 10: // 10月
+		case 11: // 11月
+			// テキストの出力
+			cout << "秋";
+			// switch文を抜ける
+			break;
+		case 12: // 12月
+		case 1: // 1月
+		case 2: // 2月
+			// テキストの出力
+			cout << "冬";
+			// switch文を抜ける
+			break;
+		default:
+			// 強制的に関数を抜ける
+			return;
 	}
 	// テキストの表示
 	cout << "です。" << endl;
