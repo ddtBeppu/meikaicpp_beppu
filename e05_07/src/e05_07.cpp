@@ -15,7 +15,7 @@ int main() {
 	const int sizeArray = 15; // 配列の要素数を定義
 	const int iMax = 10; // 生成する乱数の上限値
 
-	int iArray[sizeArray] = {}; // 要素数がsizeArrayの配列
+	int iArray[sizeArray] = {0}; // 要素数がsizeArrayの配列
 	int iRand = 0; // 乱数を格納する変数
 
 	int iHeight = iMax; // 棒グラフの高さを設定
