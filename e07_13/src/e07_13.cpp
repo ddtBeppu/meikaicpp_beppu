@@ -46,9 +46,9 @@ int main() {
 
 // 配列の全要素をコピーする関数
 void ary_cpy(int* iArrayCpy, const int* iArray, int iArrSize) {
-	// 配列の要素数だけ処理を繰り返す
-	for (int i = 0; i < iArrSize; i++) {
+	// 配列の要素数が0になるまで(全ての要素を満遍なく)
+	while (iArrSize-- > 0) {
 		// コピー元の配列の要素を、コピー先の配列のアドレスに書き込む
-		*(iArrayCpy + i) = iArray[i];
+		*iArrayCpy++ = *iArray++;
 	}
 }
