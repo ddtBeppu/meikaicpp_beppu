@@ -62,18 +62,14 @@ int main() {
 
 // 配列iArrayからキーとなる値を探索し、インデックスをiArrIdxに格納する関数
 int search_idx(int* iArray, int* iArrIdx, int iArrSize, int iKey) {
-	// 探索値が見つかった回数をカウント
-	int iNumIdx = 0;
 	// 配列iArrayの要素数回処理を繰り返し、探索
 	for (int i = 0; i < iArrSize; i++) {
 		// 参照するiArrayのアドレスに格納されているオブジェクトの値が探索値と等しい場合
 		if (*iArray++ == iKey) {
 			// インデックスを格納
 			*iArrIdx++ = i;
-			// カウントアップ
-			iNumIdx++;
 		}
 	}
-	// 探索値が見つかった回数を返却
-	return iNumIdx;
+	// 配列iArrIdxの要素数を返却
+	return sizeof(iArrIdx) / sizeof(iArrIdx[0]);
 }
