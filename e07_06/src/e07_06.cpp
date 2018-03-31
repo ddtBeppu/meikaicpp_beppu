@@ -26,20 +26,21 @@ int main() {
 	}
 
 	// 関数sumOfの第一引数として配列の先頭要素を与え、アドレスを移動させながら、値の加算をしていく
-	cout << "\n合計値は" << sumOf(&iArray[0], iNumElem) << "です。" << endl;
+	cout << "\n合計値は" << sumOf(iArray, iNumElem) << "です。" << endl;
 
 	// 正常終了
 	return 0;
 }
 
 // 要素数nの配列の全要素の合計を求めて返却する関数
+// 第一引数iA[]の値を書き換えないように明示
 int sumOf(const int iA[], int iN) {
 	int iSum = 0; // 合計値を格納する変数を定義
 
 	// 要素数分だけ加算を行う
 	for (int i = 0; i < iN; i++) {
-		// 配列の先頭要素の値から移動しつつ、加算していく
-		iSum += *(iA + i);
+		// 配列の先頭要素の値から加算していく
+		iSum += iA[i];
 	}
 
 	// 合計値を返却する
