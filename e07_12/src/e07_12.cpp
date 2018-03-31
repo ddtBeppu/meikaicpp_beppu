@@ -40,9 +40,9 @@ int main() {
 
 // iInputの値で配列を埋め尽くす関数
 void fill(int* iArray, int iArrSize, int iInput) {
-	// 配列の要素に順にアクセス
-	for (int i = 0; i < iArrSize; i++) {
+	// 配列の要素数が0になるまで(全ての要素を満遍なく)
+	while (iArrSize-- > 0) {
 		// 配列要素のアドレスを移動しながら、値を格納
-		*(iArray + i) = iInput;
+		*iArray++ = iInput;
 	}
 }
