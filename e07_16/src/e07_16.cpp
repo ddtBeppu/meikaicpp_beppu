@@ -8,23 +8,34 @@
 //               また、生成に失敗した場合の処理も行うこと。
 //============================================================================
 
+#include <new>
 #include <iomanip>
 #include <iostream>
 using namespace std;
 
 int main() {
 	int iArrSize = 0; // 配列の要素数を格納する配列
+	double* dArray; // 動的に生成する配列へのポインタとして定義
 
 	// 要素数を尋ねる
 	cout << "要素数: ";
 	// キーボードから入力
 	cin >> iArrSize;
 
-	double* dArray = new double[iArrSize]; // 配列を生成
+	try {
+		dArray = new double[iArrSize]; // 配列を生成
+	} catch (bad_alloc) { // 要素数が負の値になるなどの異常が発生したときに以下を実行
+		// 異常が発生したことを伝える
+		cout << "配列の生成に失敗しましたのでプログラムを中断します。" << endl;
+		// 異常終了
+		return 1;
+	}
 
+	// 配列の要素の入力を促す
+	cout << "\n配列の要素を設定してください。" << endl;
 	// 配列の要素数だけ繰り返し
 	for (int i = 0; i < iArrSize; i++) {
-		// 配列の要素の入力を促す
+		// 現在の配列の要素の入力を促す
 		cout << "dArray[" << i << "]: ";
 		// キーボードからの読み込み
 		cin >> dArray[i];
