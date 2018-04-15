@@ -52,34 +52,34 @@ int main() {
 
 	// 月により、場合分け
 	switch (thisMonth) {
-	case March: // 3月
-	case April: // 4月
-	case May: // 5月
-		// 季節を出力
-		callSeason(Spring);
-		// switch文を抜ける
-		break;
-	case June: // 6月
-	case July: // 7月
-	case August: // 8月
-		// 季節を出力
-		callSeason(Summer);
-		// switch文を抜ける
-		break;
-	case September: // 9月
-	case October: // 10月
-	case Novenber: // 11月
-		// 季節を出力
-		callSeason(Autumn);
-		// switch文を抜ける
-		break;
-	case Decenber: // 12月
-	case January: // 1月
-	case February: // 2月
-		// 季節を出力
-		callSeason(Winter);
-		// switch文を抜ける
-		break;
+		case March: // 3月
+		case April: // 4月
+		case May: // 5月
+			// 季節を出力
+			callSeason(Spring);
+			// switch文を抜ける
+			break;
+		case June: // 6月
+		case July: // 7月
+		case August: // 8月
+			// 季節を出力
+			callSeason(Summer);
+			// switch文を抜ける
+			break;
+		case September: // 9月
+		case October: // 10月
+		case Novenber: // 11月
+			// 季節を出力
+			callSeason(Autumn);
+			// switch文を抜ける
+			break;
+		case Decenber: // 12月
+		case January: // 1月
+		case February: // 2月
+			// 季節を出力
+			callSeason(Winter);
+			// switch文を抜ける
+			break;
 	}
 
 	// 整数値を返す
@@ -90,25 +90,25 @@ int main() {
 void callSeason(month numSeason) {
 	// 入力された値に応じてコメント
 	switch (numSeason) {
-	case Spring: // 春
-		 // テキストの出力
-		cout << "春です。" << endl;
-		// switch文を抜ける
-		break;
-	case Summer: // 夏
-		// テキストの出力
-		cout << "夏です。" << endl;
-		// switch文を抜ける
-		break;
-	case Autumn: // 秋
-		// テキストの出力
-		cout << "秋です。" << endl;
-		// switch文を抜ける
-		break;
-	case Winter: // 冬
-		// テキストの出力
-		cout << "冬です。" << endl;
-		// switch文を抜ける
-		break;
+		case Spring: // 春
+			// テキストの出力
+			cout << "春です。" << endl;
+			// switch文を抜ける
+			break;
+		case Summer: // 夏
+			// テキストの出力
+			cout << "夏です。" << endl;
+			// switch文を抜ける
+			break;
+		case Autumn: // 秋
+			// テキストの出力
+			cout << "秋です。" << endl;
+			// switch文を抜ける
+			break;
+		case Winter: // 冬
+			// テキストの出力
+			cout << "冬です。" << endl;
+			// switch文を抜ける
+			break;
 	}
 }
