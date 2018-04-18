@@ -13,7 +13,7 @@ using namespace std;
 
 int main() {
 	char a[][5] = {"LISP", "C", "Ada"}; // 1単語あたり5文字の領域をもつ文字列を格納した配列
-	char* p[] = {"PAUL", "X", "MAC"}; // char型の値を参照するポインタを定義
+	const char* p[] = {"PAUL", "X", "MAC"}; // char型の値を参照するポインタを定義
 
 	// 反復回数として、aの配列全体の大きさから、文字列あたりのサイズを割った値を設定して繰り返し
 	for (int i = 0; i < sizeof(a)/sizeof(a[0]); i++) {
