@@ -19,7 +19,6 @@ public:
 	Time();
 	// コンストラクタの定義
 	Time(int hour, int min, int sec);
-	void adjust_time(int hour, int min, int sec);
 	// 時刻の表示を行う関数
 	void call_time();
 	// 入力値と文字を連結し、文字列として返却する関数
