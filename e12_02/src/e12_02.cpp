@@ -37,6 +37,9 @@ int main() {
 	bCase[3] = 1000; // 1000の値で初期化
 	bCase[4] = inputC = Boolean::True; // Trueの値で初期化
 
+	/*-- 設問に該当する箇所 --*/
+	bCase[5] = !true; // 演算子関数!()の動作確認用
+
 	// aの値をint型にキャストして表示
 	cout << "aの値: " << int(inputA) << endl;
 	// bの値をint型に静的キャストして表示

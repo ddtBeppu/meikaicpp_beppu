@@ -44,6 +44,12 @@ public:
 		// 整数値に応じてconst char*型である"Falseあるいは"True"を返却する
 		return bValue == False ? "False" : "True";
 	}
+
+	// bValueがFalseであればbool型のtrueを、Trueであればbool型のfalseを返却する関数
+	bool operator !() const {
+		// 入力値に応じて、出力値を決定
+		return bValue == False ? true : false;
+	}
 };
 
 // 挿入子の実装
