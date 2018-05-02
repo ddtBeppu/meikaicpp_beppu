@@ -39,37 +39,37 @@ Date Date::preceding_day() const {
 	// 月ごとの最終日を設定
 	int iDayMax[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 	// メンバの値を呼び出す
-	Date temp = *this;
+	Date currDate = *this;
 
 	// 設定された日付が月の始めで無ければ、同月内での減算が可能
-	if (temp.iDay > 1) {
+	if (currDate.iDay > 1) {
 		// 減算して問題ない
-		temp.iDay--;
+		currDate.iDay--;
 	} else { // その月の1日の場合、前日は先月の最終日となるため、場合分け
 		// 1月の場合、前月は、前年の12月となるため、場合分け
-		if (--temp.iMonth < 1) {
+		if (--currDate.iMonth < 1) {
 			// 前年を設定
-			temp.iYear--;
+			currDate.iYear--;
 			// 月に12月を設定
-			temp.iMonth = 12;
+			currDate.iMonth = 12;
 		}
 		// 前月の最終日の日を設定
-		temp.iDay = iDayMax[temp.iMonth - 1];
+		currDate.iDay = iDayMax[currDate.iMonth - 1];
 	}
 	// 値を更新したクラスを返却
-	return temp;
+	return currDate;
 }
 // 日付の値と文字を連結し、文字列として返却する関数
 string Date::to_string() const {
 	// 返却する文字列のストリーム。
-	ostringstream s;
+	ostringstream oStream;
 	// 返却する文字を連結して文字列を構成する
-	s << iYear << "年" << iMonth << "月" << iDay << "日";
+	oStream << iYear << "年" << iMonth << "月" << iDay << "日";
 	// 文字列の値を返却
-	return s.str();
+	return oStream.str();
 }
 // 日付の入力と値の設定を行うための抽出子
-istream& operator>>(istream& s, Date& x) {
+istream& operator>>(istream& iStream, Date& objDate) {
 	int inputYear = 0; // 年の入力値
 	int inputMonth = 0; // 月の入力値
 	int inputDay = 0; // 日の入力値
@@ -77,24 +77,24 @@ istream& operator>>(istream& s, Date& x) {
 	// 年の入力を促す
 	cout << "年: ";
 	// キーボードより値を読み込む
-	s >> inputYear;
+	iStream >> inputYear;
 
 	cout << "月: ";
 	// キーボードより値を読み込む
-	s >> inputMonth;
+	iStream >> inputMonth;
 
 	cout << "日: ";
 	// キーボードより値を読み込む
-	s >> inputDay;
+	iStream >> inputDay;
 
 	// 入力値をメンバの値として設定する
-	x = Date(inputYear, inputMonth, inputDay);
+	objDate = Date(inputYear, inputMonth, inputDay);
 
 	// 関数の終了
-	return s;
+	return objDate;
 }
 // 日付の出力を行うための挿入子
-ostream& operator<<(ostream& s, const Date& x) {
+ostream& operator<<(ostream& oStream, const Date& objDate) {
 	// 出力値を文字列として返却
-	return s << x.to_string();
+	return oStream << objDate.to_string();
 }

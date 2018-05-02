@@ -44,6 +44,6 @@ public:
 	std::string to_string() const;
 };
 // 日付の入力を行うための抽出子
-std::istream& operator>>(std::istream& s, Date& x);
+std::istream& operator>>(std::istream& iStream, Date& objDate);
 // 日付の出力を行うための挿入子
-std::ostream& operator<<(std::ostream& s, const Date& x);
+std::ostream& operator<<(std::ostream& oStream, const Date& objDate);
